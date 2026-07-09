@@ -82,7 +82,7 @@ export const Hero = () => {
       <div ref={bgRef} className="absolute inset-0 bg-background -z-20"></div>
 
       {/* Clean Grid Layout */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full grid grid-cols-2 gap-2 sm:gap-4 md:gap-8 items-center">
 
         {/* Left Content (Text) */}
         <motion.div
@@ -95,7 +95,7 @@ export const Hero = () => {
           <p className="text-primary font-medium mb-3 tracking-wide text-lg md:text-xl">
             Hello, I'm
           </p>
-          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[110px] mb-4 text-foreground leading-[0.9] tracking-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-8xl lg:text-[110px] mb-2 sm:mb-4 text-foreground leading-[0.9] tracking-tight break-words">
             {profile?.name || 'Sanjana P'}
           </h1>
 
@@ -103,20 +103,20 @@ export const Hero = () => {
             MCA STUDENT | ASPIRING FULL STACK DEVELOPER
           </h2>
 
-          <p className="text-base md:text-lg text-foreground/80 mb-12 leading-relaxed">
+          <p className="text-[10px] sm:text-base md:text-lg text-foreground/80 mb-6 sm:mb-12 leading-relaxed">
             <span className="font-semibold text-foreground">Crafting. Building. Developing.</span>
             <br className="mb-1" />
             — Creating modern web experiences that are clean, intuitive, and user-focused.
           </p>
 
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-16">
-            <a href="#projects" className="bg-foreground text-white px-8 py-3.5 rounded-lg font-medium hover:bg-primary transition-all flex items-center gap-3">
-              <span className="text-sm">View My Work</span>
-              <ArrowUpRight size={18} />
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6 mb-8 sm:mb-16">
+            <a href="#projects" className="bg-foreground text-white px-3 py-2 md:px-8 md:py-3.5 rounded-lg font-medium hover:bg-primary transition-all flex items-center gap-2">
+              <span className="text-[10px] md:text-sm">View My Work</span>
+              <ArrowUpRight className="w-3 h-3 md:w-5 md:h-5" />
             </a>
-            <a href={profile?.resumeUrl} target="_blank" rel="noreferrer" className="bg-transparent text-foreground px-4 py-3.5 rounded-lg font-medium hover:opacity-70 transition-all flex items-center gap-3">
-              <span className="text-sm">Resume</span>
-              <ArrowUpRight size={18} />
+            <a href={profile?.resumeUrl} target="_blank" rel="noreferrer" className="bg-transparent text-foreground px-2 py-2 md:px-4 md:py-3.5 rounded-lg font-medium hover:opacity-70 transition-all flex items-center gap-2">
+              <span className="text-[10px] md:text-sm">Resume</span>
+              <ArrowUpRight className="w-3 h-3 md:w-5 md:h-5" />
             </a>
           </div>
 
